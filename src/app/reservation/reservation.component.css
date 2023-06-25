@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50vh;
+    margin-top: 99vh;
+  }
+
+  .card-title {
+    color: #d80e0e;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    font-style: bold;
+  }
+
+  .card {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

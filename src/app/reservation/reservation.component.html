@@ -1,0 +1,81 @@
+<div class="container d-flex align-items-center justify-content-center vh-100">
+   
+    <div *ngIf="!reservationConfirmed">
+
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title mt-4">Book a Table</h2>
+
+        <form [formGroup]="reservationForm" (ngSubmit)="makeReservation()">
+            <div>
+              <label for="date">Date:</label>
+              <input type="date" class="form-control" id="date" formControlName="date" required>
+            </div>
+            <br/>
+            <div>
+              <label for="time">Time:</label>
+              <select id="time" formControlName="time" class="form-control" required>
+                <option value="">Select Time</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="1:00">1:00 PM</option>
+                <option value="2:00">2:00 PM</option>
+                <option value="3:00">3:00 PM</option>
+                <option value="4:00">4:00 PM</option>
+                <option value="5:00">5:00 PM</option>
+                <option value="6:00">6:00 PM</option>
+                <option value="7:00">7:00 PM</option>
+                <option value="8:00">8:00 PM</option>
+                <option value="9:00">9:00 PM</option>
+                <option value="10:00">10:00 PM</option>
+              </select>
+            </div>
+            <br/>
+            <div>
+              <label for="noOfGuests">Number of Persons:</label>
+              <input type="number" id="noOfGuests" class="form-control" formControlName="noOfGuests" required>
+            </div>
+            <br/>
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" formControlName="name" class="form-control" required>
+            </div>
+            <br/>
+            <div>
+              <label for="location">Location:</label>
+              <input type="text" id="location" formControlName="location" class="form-control" required>
+            </div>
+            <br/>
+            <div>
+              <label for="phone">Phone:</label>
+              <input type="text" id="phone" formControlName="phone" class="form-control" required>
+            </div>
+            <br/>
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" formControlName="email" class="form-control" required>
+            </div>
+            <br/>
+            <br/>
+            <button type="submit" class="btn btn-primary form-control" [disabled]="!reservationForm.valid">Make Reservation</button>
+          </form>
+        </div>
+      </div>
+
+      </div>
+
+      <div *ngIf="reservationConfirmed">
+        <div class="card">
+          <div class="card-header">
+            <h2>Reservation Confirmed</h2>
+          </div>
+          <div class="card-body">
+            <p>Reservation confirmed, Thank you.. We will keep in touch with you....!</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" (click)="goBack()">Back</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  
