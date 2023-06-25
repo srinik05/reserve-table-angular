@@ -58,11 +58,11 @@ Update the application.properties file with your MongoDB connection details and 
 ## API Endpoints
 The following API endpoints are available:
 
-POST /api/reservations - Create a new table reservation.
-GET /api/reservations/{id}' - Get the details of a specific reservation.
-GET /api/reservations' - Get the details of all reservations.
-PUT /api/reservations/{id}' - Update an existing reservation.
-DELETE /api/reservations/{id}' - Delete a reservation.
+## POST /api/reservations - Create a new table reservation.
+## GET /api/reservations/{id}' - Get the details of a specific reservation.
+## GET /api/reservations' - Get the details of all reservations.
+## PUT /api/reservations/{id}' - Update an existing reservation.
+## DELETE /api/reservations/{id}' - Delete a reservation.
 
 
 Refer to the API documentation or Postman collection for more details on how to use these endpoints.
